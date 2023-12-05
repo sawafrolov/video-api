@@ -1,19 +1,15 @@
 package com.github.sawafrolov.videoapi.dto;
 
-import lombok.Builder;
 import lombok.Data;
-import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
-import lombok.ToString;
+import lombok.experimental.SuperBuilder;
 
 /**
  * DTO для отправки агрегированной информации о видеокамере
  */
 @Data
-@Builder
+@SuperBuilder
 @NoArgsConstructor
-@EqualsAndHashCode
-@ToString
 public class VideoCameraInfoDto {
 
     /**

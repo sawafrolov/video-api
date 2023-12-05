@@ -1,19 +1,15 @@
 package com.github.sawafrolov.videoapi.dto;
 
-import lombok.Builder;
 import lombok.Data;
-import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
-import lombok.ToString;
+import lombok.experimental.SuperBuilder;
 
 /**
  * DTO для получения данных о видеопотоке
  */
 @Data
-@Builder
+@SuperBuilder
 @NoArgsConstructor
-@EqualsAndHashCode
-@ToString
 public class VideoStreamDto {
 
     /**
