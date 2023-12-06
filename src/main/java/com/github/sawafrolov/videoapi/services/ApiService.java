@@ -1,11 +1,12 @@
 package com.github.sawafrolov.videoapi.services;
 
 import reactor.core.publisher.Flux;
-import reactor.core.publisher.Mono;
+
+import java.util.Optional;
 
 public interface ApiService {
 
-    <T> Mono<T> retrieveMono(String url, Class<T> dtoClass);
+    <T> Optional<T> retrieveObject(String url, Class<T> dtoClass);
 
     <T> Flux<T> retrieveFlux(String url, Class<T> dtoClass);
 }

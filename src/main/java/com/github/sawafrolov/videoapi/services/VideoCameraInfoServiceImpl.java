@@ -55,15 +55,15 @@ public class VideoCameraInfoServiceImpl implements VideoCameraInfoService {
         videoCameraInfoDto.setId(videoCameraDto.getId());
 
         apiService
-                .retrieveMono(videoCameraDto.getSourceDataUrl(), VideoStreamDto.class)
-                .subscribe(videoStreamDto -> {
+                .retrieveObject(videoCameraDto.getSourceDataUrl(), VideoStreamDto.class)
+                .ifPresent(videoStreamDto -> {
                     videoCameraInfoDto.setUrlType(videoStreamDto.getUrlType());
                     videoCameraInfoDto.setVideoUrl(videoStreamDto.getVideoUrl());
                 });
 
         apiService
-                .retrieveMono(videoCameraDto.getTokenDataUrl(), TokenDto.class)
-                .subscribe(tokenDto -> {
+                .retrieveObject(videoCameraDto.getTokenDataUrl(), TokenDto.class)
+                .ifPresent(tokenDto -> {
                     videoCameraInfoDto.setValue(tokenDto.getValue());
                     videoCameraInfoDto.setTtl(tokenDto.getTtl());
                 });
