@@ -33,7 +33,7 @@ public class VideoCameraInfoServiceImpl implements VideoCameraInfoService {
     @Override
     public Flux<VideoCameraInfoDto> collectVideoCameraInfo() {
         return apiService
-                .retrieveFlux(createApiUrl(), VideoCameraDto.class)
+                .retrieveData(createApiUrl(), VideoCameraDto.class)
                 .map(this::collectInfo);
     }
 

@@ -23,7 +23,7 @@ public class ApiServiceImpl implements ApiService {
     }
 
     @Override
-    public <T> Flux<T> retrieveFlux(String url, Class<T> dtoClass) {
+    public <T> Flux<T> retrieveData(String url, Class<T> dtoClass) {
         return webClient
                 .get()
                 .uri(url)

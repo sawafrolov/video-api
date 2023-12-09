@@ -8,5 +8,5 @@ public interface ApiService {
 
     <T> Optional<T> retrieveObject(String url, Class<T> dtoClass);
 
-    <T> Flux<T> retrieveFlux(String url, Class<T> dtoClass);
+    <T> Flux<T> retrieveData(String url, Class<T> dtoClass);
 }

@@ -1,4 +1,4 @@
-package com.github.sawafrolov.videoapi;
+package com.github.sawafrolov.videoapi.test;
 
 import org.springframework.boot.test.context.SpringBootTest;
 
